@@ -21,7 +21,7 @@
 #define LCD_DATA_PORT PORTA
 
 
-#define CURSOR_EN	0x01
+#define CURSOR_EN	0x00
 #define CURSOR_ON   0x02
 // Maximum number of digits for a number to display
 #define BUFFER_SIZE 9  // 8 digits + '\0'
