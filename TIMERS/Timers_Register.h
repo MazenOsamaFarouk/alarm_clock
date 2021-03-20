@@ -89,6 +89,15 @@ void __vector_4(void)  __attribute__((signal));
 
 
 
+#define NO_CLK           (0x00)
+#define IO_PS_1          (0x01)
+#define IO_PS_8          (0x02)
+#define IO_PS_64         (0x03)
+#define IO_PS_256        (0x04)
+#define IO_PS_1024       (0x05)
+#define XT_FALLING_EDGE  (0x06)
+#define XT_RISING_EDGE   (0x07)
+
 
 
 /*********** TIMER0 REGISTER bits***********/
@@ -103,6 +112,7 @@ void __vector_4(void)  __attribute__((signal));
 #define TCNT0_PWM      1
 #define TCNT0_CTC      2
 #define TCNT0_FAST_PWM 3
+
 
 
 #define COM00 4
@@ -120,15 +130,6 @@ void __vector_4(void)  __attribute__((signal));
 #define SET_OC0_INV		       (0x03<<4)
 
 
-
-#define NO_CLK           (0x00)
-#define IO_PS_1          (0x01)
-#define IO_PS_8          (0x02)
-#define IO_PS_64         (0x03)
-#define IO_PS_256        (0x04)
-#define IO_PS_1024       (0x05)
-#define XT_FALLING_EDGE  (0x06)
-#define XT_RISING_EDGE   (0x07)
 
 /***************** Timer/counter 1 register bits ****************/
 
@@ -178,6 +179,12 @@ void __vector_4(void)  __attribute__((signal));
 #define FOC1A    3
 #define FOC1B    2
 
+
+/* Timer/counter 2 MODES of operation */
+#define TCNT2_NORMAL   0
+#define TCNT2_PWM      1
+#define TCNT2_CTC      2
+#define TCNT2_FAST_PWM 3
 
 /*TIMSK bits*/
 // Timer/counter 0

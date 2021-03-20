@@ -12,7 +12,7 @@
 /********* Timer/counter 0 config settings ************/
 #define TCNT2_OP_MODE           TCNT2_FAST_PWM
 #define TCNT2_CLK_SELECT        IO_PS_64
-#define TCNT2_OCM2_Interrupt          DISABLE
+#define TCNT2_OCM2_Interrupt    DISABLE
 #define TCNT2_OVF_Interrupt     DISABLE
 #define TCNT2_PRELOAD			0
 
