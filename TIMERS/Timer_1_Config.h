@@ -11,7 +11,7 @@
 
 /****************** Timer/counter 1 config settings ********************/
 #define TCNT1_OP_MODE          TCNT1_CTC_OC
-#define TCNT1_CLK_SELECT        IO_PS_256
+#define TCNT1_CLK_SELECT        IO_PS_1024
 
 #define OC1_CHANNEL_SELECT        A
 

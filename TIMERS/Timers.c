@@ -259,10 +259,21 @@ void __vector_7(void)
 /* Timer-1 - Input Capture ISR */
 void __vector_6(void)
 {
+	/* WARNING: THIS MODIFICATION WAS BECASUE THE
+	 * VECTOR TABLE OF ATMEGA16 IS DIFFERENT FROM
+	 * ATMEGA32 ...*/
+	if(TCNT1_CallBackFptr[CB_TCNT1_CTC_A] != NULL)
+	{
+		TCNT1_CallBackFptr[CB_TCNT1_CTC_A]();
+	}
+/*
+
 	if(TCNT1_CallBackFptr[CB_TCNT1_IC] != NULL)
 	{
 		TCNT1_CallBackFptr[CB_TCNT1_IC]();
 	}
+
+*/
 }
 
 /* Timer/counter 2 - Overflow ISR */
