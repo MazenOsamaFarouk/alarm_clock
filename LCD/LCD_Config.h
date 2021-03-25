@@ -17,11 +17,13 @@
 #define RS PIN0
 #define RW PIN1
 #define EN  PIN2
-#define LCD_CTRL_PORT PORTA
-#define LCD_DATA_PORT PORTB
+#define LCD_CTRL_PORT PORTB
+#define LCD_DATA_PORT PORTA
 
 
-#define CURSOR_EN	0x00
+#define CURSOR_EN	 0      // type 1 or 0 to enable or disable the cursor
+#define BLINK_EN	 0	   // type 1 or 0 to enable or disable the blinking of the cursor
+#define DISPLAY_EN	 1
 #define CURSOR_ON   0x02
 // Maximum number of digits for a number to display
 #define BUFFER_SIZE 9  // 8 digits + '\0'

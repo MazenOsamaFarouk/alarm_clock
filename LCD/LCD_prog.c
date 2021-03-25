@@ -143,7 +143,8 @@ void LCD_VidInit(void)
 		DIO_VidSetPortDirection(LCD_DATA_PORT,0xFF); /* Configure the data port as output port */
 		LCD_VidSendCommand(TWO_LINE_LCD_Eight_BIT_MODE); /* use 2-line lcd + 8-bit Data Mode + 5*7 dot display Mode */
 		_delay_ms(1);
-		LCD_VidSendCommand((DIPLAY_ON|CURSOR_EN)); /* cursor off */
+		//1(D)(C)(B)
+		LCD_VidSendCommand((DISPLAY_ON|(DISPLAY_EN<<2)|(CURSOR_EN<<1)|(BLINK_EN<<0))); /* cursor off */
 		_delay_ms(1);
 		LCD_VidSendCommand(0x06); //Entry mode set-see page(17)
 		LCD_VidSendCommand(CLEAR_DISPLAY); /* clear LCD at the beginning */
