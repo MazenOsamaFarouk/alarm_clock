@@ -2,7 +2,7 @@
  * main.c
  *
  *  Created on: Mar 20, 2021
- *      Author: mazen
+ *      Author: mazen Osama
  */
 
 #include "LIB/STD_TYPES.h"
